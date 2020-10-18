@@ -54,11 +54,16 @@ public class Disc : MonoBehaviour
             if (collision.gameObject.GetComponent<SpriteRenderer>().color == Color.red)
             {
                 collision.gameObject.GetComponent<SpriteRenderer>().color = Color.green;
+                collision.gameObject.GetComponent<Block>().timer = collision.gameObject.GetComponent<Block>().startTimer;
+                collision.gameObject.GetComponent<Block>().countdown = true;
             }
             else
             {
                 collision.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+                collision.gameObject.GetComponent<Block>().countdown = false;
             }
+
+            Debug.Log(collision.gameObject.name + " Timer: " + collision.gameObject.GetComponent<Block>().timer + " Countdown: " + collision.gameObject.GetComponent<Block>().countdown);
         }
 
     }
