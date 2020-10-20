@@ -9,6 +9,10 @@ public class Launcher : MonoBehaviour
     int num;
     bool shoot;
 
+    Vector3 pos;
+    Vector3 dir;
+    float angle;
+
 
     void Start()
     {
@@ -20,7 +24,7 @@ public class Launcher : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetButtonDown("Jump") && shoot || Input.GetKeyDown(KeyCode.Space) && shoot)
+        if (Input.GetButtonDown("Jump") && shoot || Input.GetKeyDown(KeyCode.Space) && shoot || Input.GetButtonDown("Fire1") && shoot || Input.GetKeyDown(KeyCode.Mouse1) && shoot)
         {
             Instantiate(disc, transform.position, transform.rotation);
             num++;
@@ -44,6 +48,11 @@ public class Launcher : MonoBehaviour
             transform.Rotate(0, 0, -.5f);
 
         }
+
+        pos = Camera.main.WorldToScreenPoint(transform.position);
+        dir = Input.mousePosition - pos;
+        angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
     }
 }
