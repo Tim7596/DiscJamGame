@@ -9,7 +9,9 @@ public class GameLogic : MonoBehaviour
     public bool[] ready;
     bool done;
     string checking;
-    
+
+    public static int[] solution = new int[] { 3, 2, 1, 0 };
+
     void Start()
     {
         
@@ -30,6 +32,9 @@ public class GameLogic : MonoBehaviour
         {
 
         }
+
+
+        
 
     }
 
@@ -69,4 +74,8 @@ public class GameLogic : MonoBehaviour
         }
 
     }
-}
+
+
+    
+    }
+

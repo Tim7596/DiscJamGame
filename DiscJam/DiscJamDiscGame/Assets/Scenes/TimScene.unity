@@ -758,6 +758,8 @@ MonoBehaviour:
   startTimer: 3
   countdown: 0
   active: 0
+  end: 0
+  digit: 1
 --- !u!1 &1118577510
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,6 +887,8 @@ MonoBehaviour:
   startTimer: 3
   countdown: 0
   active: 0
+  end: 0
+  digit: 0
 --- !u!1 &1266698318
 GameObject:
   m_ObjectHideFlags: 0
@@ -1012,6 +1016,8 @@ MonoBehaviour:
   startTimer: 3
   countdown: 0
   active: 0
+  end: 0
+  digit: 3
 --- !u!1 &1479210172
 GameObject:
   m_ObjectHideFlags: 0
@@ -1139,6 +1145,8 @@ MonoBehaviour:
   startTimer: 3
   countdown: 0
   active: 0
+  end: 0
+  digit: 2
 --- !u!1 &1603177297
 GameObject:
   m_ObjectHideFlags: 0
@@ -1236,7 +1244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disc: {fileID: 2791416642444584843, guid: 9ddbc465206920f44b2f93c47569bbba, type: 3}
-  limit: 3
+  limit: 10
 --- !u!1 &1659769608
 GameObject:
   m_ObjectHideFlags: 0

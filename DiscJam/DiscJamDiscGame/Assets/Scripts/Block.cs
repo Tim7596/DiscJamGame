@@ -12,7 +12,11 @@ public class Block : MonoBehaviour
 
     [HideInInspector] public bool countdown;
     [HideInInspector] public bool active;
+    [HideInInspector] public bool end;
 
+    public int digit;
+    public static int[] input = new int[] { -1, -1, -1, -1 };
+    private static int[] solution = new int[] { 0, 1, 2, 3 };
 
 
 
@@ -27,6 +31,8 @@ public class Block : MonoBehaviour
         countdown = false;
 
         active = false;
+
+        end = false;
     }
 
     
@@ -42,11 +48,33 @@ public class Block : MonoBehaviour
                 sprite.color = Color.red;
                 countdown = false;
                 active = false;
+                input[0] = -1;
+                input[1] = -1;
+                input[2] = -1;
+                input[3] = -1;
             }
 
-            Debug.Log(this.gameObject.name + " Timer: " + timer + " Countdown: " + countdown);
+            
             active = true;
         }
 
+
+        if (solution[0] == input[0] && solution[1] == input[1] && solution[2] == input[2] && solution[3] == input[3])
+        {
+            Debug.Log("Correct Answer");
+        }
+
     }
+
+
+    public void ApplyInput()
+    {
+        input[0] = input[1];
+        input[1] = input[2];
+        input[2] = input[3];
+        input[3] = digit;
+
+        Debug.Log(input[0] + " " + input[1] + " " + input[2] + " " + input[3]);
+    }
+
 }
