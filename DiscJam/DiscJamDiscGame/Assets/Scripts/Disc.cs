@@ -80,5 +80,10 @@ public class Disc : MonoBehaviour
             dieCount = true;
         }
 
+        if(collision.gameObject.tag == "No" || collision.gameObject.tag == "Beam")
+        {
+            Destroy(this.gameObject);
+        }
+
     }
 }
