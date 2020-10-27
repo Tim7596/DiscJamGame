@@ -26,7 +26,7 @@ public class Launcher : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && shoot || Input.GetKeyDown(KeyCode.Space) && shoot || Input.GetButtonDown("Fire1") && shoot || Input.GetKeyDown(KeyCode.Mouse1) && shoot)
         {
-            Instantiate(disc, transform.position, transform.rotation);
+            Instantiate(disc, transform.position, transform.localRotation);
             num++;
             Debug.Log("shoot");
         }

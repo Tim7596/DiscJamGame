@@ -14,6 +14,9 @@ public class Block : MonoBehaviour
     [HideInInspector] public bool active;
     [HideInInspector] public bool end;
 
+    public GameLogic manager;
+    
+
     public int digit;
     public static int[] input = new int[] { -1, -1, -1, -1 };
     private static int[] solution = new int[] { 0, 1, 2, 3 };
@@ -62,6 +65,7 @@ public class Block : MonoBehaviour
         if (solution[0] == input[0] && solution[1] == input[1] && solution[2] == input[2] && solution[3] == input[3])
         {
             Debug.Log("Correct Answer");
+            manager.done = true;
         }
 
     }

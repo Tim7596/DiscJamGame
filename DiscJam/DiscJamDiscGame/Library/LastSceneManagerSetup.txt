@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/TimScene.unity
+- path: Assets/Scenes/Tims Levels/T1.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

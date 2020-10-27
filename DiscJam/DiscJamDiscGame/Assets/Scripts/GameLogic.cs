@@ -1,36 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameLogic : MonoBehaviour
 {
 
-    public GameObject[] blocks;
-    public bool[] ready;
-    bool done;
+    public string NextLevel;
+    [HideInInspector] public bool done;
     string checking;
 
     public static int[] solution = new int[] { 3, 2, 1, 0 };
 
     void Start()
     {
-        
+        done = false;
     }
 
     
     void Update()
     {
 
-        for (int i = 0; i > blocks.Length; i++)
+        /*for (int i = 0; i > blocks.Length; i++)
         {
             ready[i] = blocks[i].GetComponent<Block>().active;
         }
 
-        CheckArrays(0, blocks.Length, checking);
+        CheckArrays(0, blocks.Length, checking);*/
 
         if (done)
         {
-
+            SceneManager.LoadScene(NextLevel);
         }
 
 
@@ -39,7 +39,7 @@ public class GameLogic : MonoBehaviour
     }
 
 
-    bool CheckArrays(int lowVal, int highVal, string myArray)
+    /*bool CheckArrays(int lowVal, int highVal, string myArray)
     {
 
         for(int i = lowVal; i < highVal; i++)
@@ -73,7 +73,7 @@ public class GameLogic : MonoBehaviour
             return false;
         }
 
-    }
+    }*/
 
 
     
